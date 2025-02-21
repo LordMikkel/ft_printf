@@ -90,11 +90,66 @@ int main()
 Compile it with:
 
 ```bash
-gcc main.c libftprintf.a -o my_printf
-./my_printf
+gcc main.c libftprintf.a -o test
+./test
 ```
 
 ---
+
+## 🔨 Makefile Rules
+
+The Makefile includes the following rules to manage the project build process:
+
+- **`make`**: Compiles the project and generates the `libftprintf.a` static library.
+
+- **`make bonus`**: Compiles and links the bonus features of the project, enabling additional formatting options such as custom flags (e.g., `Min_width`, `-`, `0`, `#`, `+`, etc.). It produces a version of the library with these extended functionalities.
+
+- **`make test`**: Compiles and runs a series of tests for basic and complex formats. The tests verify if the `ft_printf` implementation matches the standard `printf` behavior for various specifiers such as characters, strings, integers, hexadecimals, and combinations. The results will be displayed as pass/fail.
+
+- **`make testbonus`**: Compiles and runs tests for the bonus functionalities, such as handling flags like `Min_width`, `-`, `0`, `#`, `+`, and space. It ensures that these additional format specifiers are correctly handled by `ft_printf`.
+
+- **`make clean`**: Removes object files (`.o`) from the `src/` and `src_bonus/` directories to clean up intermediate build files.
+
+- **`make fclean`**: Removes both object files and the compiled static library (`libftprintf.a`). This cleans the project completely, removing all generated files.
+
+- **`make re`**: Cleans the project and rebuilds everything from scratch. This is equivalent to running `make fclean` followed by `make`, ensuring that the project is recompiled from the beginning.
+
+---
+
+### Example Test Results
+
+In your `main.c`, several tests are run to check the correctness of your `ft_printf` implementation. The test cases cover:
+
+#### Basic Character and String Tests
+- `char`: Test for printing characters like `'A'`, `\0`, and special characters like `\n`.
+- `string`: Test for basic strings, empty strings, and long strings.
+
+#### Pointer Tests
+- Testing pointers with valid addresses and `NULL`.
+
+#### Integer and Number Tests
+- Tests for positive and negative integers, as well as `INT_MAX` and `INT_MIN`.
+- Tests for unsigned integers, including `UINT_MAX`.
+
+#### Hexadecimal Tests
+- Tests for hexadecimal representation in both lowercase and uppercase.
+
+#### Combination of Formats
+- Tests for combinations of various format specifiers.
+
+#### Bonus Tests (If Defined)
+- Tests for additional flags such as `Min_width`, `-`, `0`, `#`, `+`, and space.
+- Tests with multiple flags combined, ensuring that they work correctly in various formats.
+
+#### Test Output
+The `ft_printf` function is compared against the standard `printf` function to ensure it produces identical outputs. If the outputs match, the test passes; otherwise, it fails.
+
+The summary at the end of the tests will display:
+- The number of tests passed (in green).
+- The number of tests failed (in red).
+
+The **Makefile** ensures that these tests can be easily executed by simply running `make test` or `make testbonus`.
+
 
 ## 🏆 Credits
 

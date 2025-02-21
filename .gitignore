@@ -6,6 +6,5 @@
 *.a
 *.swp
 .gitignore
-main.c
 .editorconfig
 README.*
