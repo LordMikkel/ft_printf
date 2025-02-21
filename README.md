@@ -103,70 +103,57 @@ The Makefile includes a set of rules that help streamline the project build proc
 ### 📦 **`make`**: Compile the core project
 Compiles the project and generates the `libftprintf.a` static library. This is the foundation for your `ft_printf` implementation.
 
----
 
 ### 🏆 **`make bonus`**: Enable bonus features
 Compiles and links the bonus features of the project, enabling additional formatting options such as custom flags (e.g., `Min_width`, `-`, `0`, `#`, `+`, etc.). This produces a version of the library with these extended functionalities.
 
----
 
 ### 🧪 **`make test`**: Run basic tests
 Compiles and runs a comprehensive suite of tests for basic and complex formats. The test suite ensures your `ft_printf` works as expected, comparing it against the standard `printf` implementation. Tests cover characters, strings, integers, hexadecimals, and combinations.
 
----
 
 ### 🧪 **`make testbonus`**: Run bonus tests
 Compiles and runs tests specifically designed for the bonus features. These tests verify that flags such as `Min_width`, `-`, `0`, `#`, `+`, and space are handled correctly. Bonus functionality ensures your `ft_printf` is more flexible and robust.
 
----
 
 ### 🧹 **`make clean`**: Clean up object files
 Removes all object files (`.o`) from the `src/` and `src_bonus/` directories, cleaning up intermediate build files to prepare for fresh compilations.
 
----
 
 ### 🧹 **`make fclean`**: Full cleanup
 Removes both object files and the compiled static library (`libftprintf.a`). This ensures the project is entirely cleaned, removing all generated files.
 
----
 
 ### 🔄 **`make re`**: Rebuild everything
 Performs a complete rebuild of the project from scratch by running `make fclean` followed by `make`. This is perfect when you need to ensure that all files are freshly compiled.
 
----
 
 ### Example Test Results
 
 In your `main.c`, several tests are executed to check the correctness of your `ft_printf` implementation. The tests encompass a variety of formats and edge cases, ensuring comprehensive coverage. Here's an overview:
 
----
 
 #### 🔠 **Basic Character and String Tests**
 - **Characters**: Test for basic characters like `'A'`, null characters (`\0`), and special characters like newline (`\n`).
 - **Strings**: Tests for normal strings, empty strings, and long strings to check memory handling and performance.
 
----
 
 #### 🧑‍💻 **Pointer Tests**
 - Tests for printing valid pointer addresses and handling `NULL` pointers.
 
----
 
 #### 💯 **Integer and Number Tests**
 - **Integers**: Tests for positive and negative integers, as well as boundary values like `INT_MAX` and `INT_MIN`.
 - **Unsigned Integers**: Tests for unsigned integers, including edge cases like `UINT_MAX`.
 
----
 
 #### 🔢 **Hexadecimal Tests**
 - Verifying the correct representation of hexadecimal numbers in both lowercase (`%x`) and uppercase (`%X`).
 
----
 
 #### 🔀 **Combination of Formats**
 - Tests involving multiple format specifiers in a single print statement, ensuring that combinations work as expected.
 
----
 
 #### 🎁 **Bonus Tests (If Defined)**
 - Tests for additional flags such as `Min_width`, `-`, `0`, `#`, `+`, and space. These flags offer more control over the printed output.
@@ -174,20 +161,23 @@ In your `main.c`, several tests are executed to check the correctness of your `f
 
 ---
 
-### Test Output
+### 🧪 **Test Output**
 
-Each test compares the output of `ft_printf` to the standard `printf`. If the outputs match, the test **passes**; otherwise, it **fails**. At the end of the test suite, a summary will display:
+Each test compares the output of `ft_printf` with the standard `printf` output. If the outputs match, the test **passes**; otherwise, it **fails**. At the end of the test suite, a summary will display:
 
-- **Passed Tests**: Displayed in green.
-- **Failed Tests**: Displayed in red.
+- **Passed Tests**: Displayed in green 🟩.
+- **Failed Tests**: Displayed in red 🟥.
 
----
+### ⚙️ **Makefile**
 
 With the **Makefile**, you can easily run tests with a single command:
-- Run all tests: `make test`
-- Run tests for bonus features: `make testbonus`
 
-The **Makefile** simplifies your development workflow, making it easy to test and debug your `ft_printf` implementation.
+- Run all tests: `make test` 🧑‍💻
+- Run tests for bonus features: `make testbonus` 🎁
+
+The **Makefile** simplifies your development workflow, making it quicker and easier to test and debug your `ft_printf` implementation. 🚀
+
+---
 
 
 ## 🏆 Credits
