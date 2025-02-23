@@ -114,7 +114,7 @@ Removes both object files and the compiled static library (`libftprintf.a`). Thi
 - ### 🔄 **`make re/rebonus`**: Rebuild everything
 Performs a complete rebuild of the project from scratch by running `make fclean` followed by `make`. This is perfect when you need to ensure that all files are freshly compiled.
 
-
+![alt text](.make.gif)
 
 ---
 

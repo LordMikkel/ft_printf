@@ -6,7 +6,7 @@
 #    By: migarrid <migarrid@student.42barcelona.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/28 19:51:37 by migarrid          #+#    #+#              #
-#    Updated: 2025/02/17 11:52:38 by migarrid         ###   ########.fr        #
+#    Updated: 2025/02/23 22:12:18 by migarrid         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -87,14 +87,14 @@ OBJS = $(SRCS:.c=.o)
 BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 # Variables de progreso
-SRC_COUNT_TOT := $(shell expr $(shell echo -n $(SRCS) | wc -w) - $(shell ls -l $(OBJS) 2>&1 | grep ".o" | wc -l) + 1)
+SRC_COUNT_TOT := $(shell echo -n $(SRCS) | wc -w)
 ifeq ($(shell test $(SRC_COUNT_TOT) -le 0; echo $$?),0)
 	SRC_COUNT_TOT := $(shell echo -n $(SRCS) | wc -w)
 endif
 SRC_COUNT := 0
 SRC_PCT = $(shell expr 100 \* $(SRC_COUNT) / $(SRC_COUNT_TOT))
 
-BONUS_COUNT_TOT := $(shell expr $(shell echo -n $(BONUS_SRCS) | wc -w) - $(shell ls -l $(BONUS_OBJS) 2>&1 | grep ".o" | wc -l) + 1)
+BONUS_COUNT_TOT := $(shell echo -n $(BONUS_SRCS) | wc -w)
 ifeq ($(shell test $(BONUS_COUNT_TOT) -le 0; echo $$?),0)
 	BONUS_COUNT_TOT := $(shell echo -n $(BONUS_SRCS) | wc -w)
 endif
