@@ -160,7 +160,7 @@ Each test compares the output of `ft_printf` with the standard `printf` output. 
 
 ### ☠️ Final Boss
 
-This printf implementation pass all the tests of ultimate [ft_printf_test](https://github.com/cacharle/ft_printf_test) when you execute de 938 test there will show you in your terminal intertnaible bumber of warnings, dont panic, just let it flow at the end it shows the result of this inoxerable tests. 
+This printf implementation passes all the tests from ultimate [ft_printf_test](https://github.com/cacharle/ft_printf_test) when you execute the 938 tests, your terminal may display an overwhelming number of warnings—don’t panic! Just let it run, and in the end, you’ll see the final test results.
 
 ![alt text](.tests.png)
 
