@@ -18,7 +18,7 @@ Welcome to `ft_printf`, a project developed as part of the 42 curriculum. This i
 - **%x / %X** → Hexadecimal (lower/uppercase)
 - **%%** → Print a literal `%`
 
-✅ Supports essential formatting flags:
+✅ Bonus Implementation: Supports essential formatting flags:
 
 - **-** → Left-align output
 - **0** → Zero-padding
@@ -26,12 +26,6 @@ Welcome to `ft_printf`, a project developed as part of the 42 curriculum. This i
 - **+** → Force display of sign for numeric values
 - **(space)** → Add a space before positive numbers
 - **.precision** → Control string truncation & numeric precision
-
-✅ **Bonus Implementation**:
-
-- Extra flag handling (`#`, `+`, space)
-- Extended formatting precision
-- More efficient internal memory handling
 
 ⚠️ **Limitations**:
 
@@ -45,11 +39,11 @@ Welcome to `ft_printf`, a project developed as part of the 42 curriculum. This i
 ```
 ft_printf
 ├── includes/         # Header files
-├── libft/            # Custom string & memory functions
+├── [libft](https://github.com/LordMikkel/libft)/            # Custom string & memory functions
 ├── src/              # Core implementation of ft_printf
 │   ├── ft_printf.c   # Main function
 │   ├── utils/        # Helper functions for formatting
-├── src_bonus/        # Extended functionality
+├── src_bonus/        # Extended flags functionality
 │   ├── ft_printf_bonus.c
 │   ├── utils/        # Bonus-specific utilities
 ├── Makefile          # Build automation
@@ -86,52 +80,47 @@ int main()
     return 0;
 }
 ```
-
-Compile it with:
-
-```bash
-gcc main.c libftprintf.a -o test
-./test
-```
+---
 
 ## 🔨 Makefile Rules
 
 The Makefile includes a set of rules that help streamline the project build process and testing:
 
----
 
-### 📦 **`make`**: Compile the core project
+- ### 📦 **`make`**: Compile the core project
 Compiles the project and generates the `libftprintf.a` static library. This is the foundation for your `ft_printf` implementation.
 
 
-### 🏆 **`make bonus`**: Enable bonus features
+- ### 🏆 **`make bonus`**: Enable bonus features
 Compiles and links the bonus features of the project, enabling additional formatting options such as custom flags (e.g., `Min_width`, `-`, `0`, `#`, `+`, etc.). This produces a version of the library with these extended functionalities.
 
 
-### 🧪 **`make test`**: Run basic tests
+- ### 🧪 **`make test`**: Run basic tests
 Compiles and runs a comprehensive suite of tests for basic and complex formats. The test suite ensures your `ft_printf` works as expected, comparing it against the standard `printf` implementation. Tests cover characters, strings, integers, hexadecimals, and combinations.
 
 
-### 🧪 **`make testbonus`**: Run bonus tests
+- ### 🧪 **`make testbonus`**: Run bonus tests
 Compiles and runs tests specifically designed for the bonus features. These tests verify that flags such as `Min_width`, `-`, `0`, `#`, `+`, and space are handled correctly. Bonus functionality ensures your `ft_printf` is more flexible and robust.
 
 
-### 🧹 **`make clean`**: Clean up object files
+- ### 🧹 **`make clean`**: Clean up object files
 Removes all object files (`.o`) from the `src/` and `src_bonus/` directories, cleaning up intermediate build files to prepare for fresh compilations.
 
 
-### 🧹 **`make fclean`**: Full cleanup
+- ### 🧹 **`make fclean`**: Full cleanup
 Removes both object files and the compiled static library (`libftprintf.a`). This ensures the project is entirely cleaned, removing all generated files.
 
 
-### 🔄 **`make re`**: Rebuild everything
+- ### 🔄 **`make re/rebonus`**: Rebuild everything
 Performs a complete rebuild of the project from scratch by running `make fclean` followed by `make`. This is perfect when you need to ensure that all files are freshly compiled.
+
+
 
 ---
 
-### Example Test Results
+### 🎯 Example Test Results
 
-In your `main.c`, several tests are executed to check the correctness of your `ft_printf` implementation. The tests encompass a variety of formats and edge cases, ensuring comprehensive coverage. Here's an overview:
+In my `main.c`, several tests are executed to check the correctness of the `ft_printf` implementation. The tests encompass a variety of formats and edge cases, ensuring comprehensive coverage. Here's an overview:
 
 
 #### 🔠 **Basic Character and String Tests**
@@ -169,17 +158,13 @@ Each test compares the output of `ft_printf` with the standard `printf` output. 
 - **Passed Tests**: Displayed in green 🟩.
 - **Failed Tests**: Displayed in red 🟥.
 
-### ⚙️ **Makefile**
+### ☠️ Final Boss
 
-With the **Makefile**, you can easily run tests with a single command:
+This printf implementation pass all the tests of ultimate [ft_printf_test](https://github.com/cacharle/ft_printf_test) when you execute de 938 test there will show you in your terminal intertnaible bumber of warnings, dont panic, just let it flow at the end it shows the result of this inoxerable tests. 
 
-- Run all tests: `make test` 🧑‍💻
-- Run tests for bonus features: `make testbonus` 🎁
-
-The **Makefile** simplifies your development workflow, making it quicker and easier to test and debug your `ft_printf` implementation. 🚀
+![alt text](.tests.png)
 
 ---
-
 
 ## 🏆 Credits
 
