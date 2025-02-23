@@ -170,8 +170,7 @@ This printf implementation passes all the tests from ultimate [ft_printf_test](h
 
 Developed by **Mikel Garrido** as part of the 42 curriculum.
 
-i want to thanks to:
-[madebypixel02](https://github.com/madebypixel02/ft_printf?tab=readme-ov-file) for the super cool prorgress bars, [cacharle](https://github.com/cacharle/ft_printf_test) for the ultimate test and vdaniely for the initial main
+I want to thank [madebypixel02](https://github.com/madebypixel02/ft_printf?tab=readme-ov-file) for the super cool progress bars, [cacharle](https://github.com/cacharle/ft_printf_test) for the ultimate test, and vdaniely for the initial main
 
 🔗 [GitHub: LordMikkel](https://github.com/LordMikkel)
 
